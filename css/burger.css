@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+  /* header */
+  .burgermenu{
+    display: none;
+  }
+  header{
+    display: flex;
+  }
+  h1{
+   background-image: url(../img/Iliaunilogo.png);
+   width: 100px;
+   height: 100px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-top: 20px;
+   margin-left: 40px;
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    width: 76%;
+    gap: 100px;
+    margin-left: 104px;
+    margin-top: 54px;
+  }
+  li a{
+    color: #ffffff8e;
+    font-size: 22px;
+  }
+  .alwayswhite{
+    color: #af0e0ea3;
+  }
+  header ul a,li{
+    position: relative;
+  }
+  header a:hover{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  /*main */
+  body{
+    background-image: url(../img/back.png);
+    height: 100%;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .maindescription{
+    margin-left: 30%;
+  }
+  .maindescription p{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: 630px;
+  }
+  /* footer */
+  footer{
+      margin-top: 200px;
+      width: 100%;
+      background-image: url(../img/footerbackground.jpg);
+  }
+  .topfooter{
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 70px;
+      padding-bottom: 60px;
+  }
+  .topfooter img{
+    width: 150px;
+    height: 150px;
+    margin-top: 40px ;
+  }
+  .footinformation, .footinformation a, .footcontact{
+      color: #FFFFFF;
+      font-weight: 700;
+  }
+  .topfooter h3{
+      padding-bottom: 24px;
+  }
+  .footinformation li{
+      padding-bottom: 16px;
+  }
+  .footcontact p{
+      padding-bottom: 50px;
+  }
+  .footericons img{
+      padding-right: 40px;
+  }
+  .footerline{
+      width: 100%;
+      height: 1px;
+      background-color: #FFFFFF;
+      opacity: 0.1;
+  }
+  .footerbottom p{
+      text-align: center;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      columns: #C8C8C880;
+      opacity: 0.5;
+  } 
+  @media screen and (max-width:431px) {
+    /* header */
+    .burgermenu{
+      display: block;
+    }
+    header ul{
+      display: none;
+    }
+    header {
+        border-bottom: 1px solid #a00909b1;
+        height: 100px;
+    }
+    h1{
+        background-image: url(../img/Iliaunilogo.png);
+        width: 70px;
+        height: 70px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 12px;
+        margin-left: 18px;
+    }
+    .burger-wrapper {
+      cursor: pointer;
+    }
+    #meny {
+        background: #a00909;
+        width: 431px;
+        height: 100px;
+        position: fixed;
+        right: 0;
+        transition-timing-function: cubic-bezier(10,2,3,1);
+        transform: translateX(50rem);
+        top: 0;
+        z-index: 0;
+        transition: 0.5s;
+    }
+    #meny ul{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        gap: 10px;
+        margin-left: 0;
+        padding-top: 8px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    #meny li a{
+        font-size: 18px;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+    .alwayswhite{
+        color: #000000;
+      }
+    #menyAvPaa {
+        display: none;
+    }
+    
+    #menyAvPaa:checked ~ #meny {
+        transform: translateX(0rem);
+    }
+    
+    #burger {
+        position: absolute;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        right: 22px;
+        top: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    #burger > div {
+        height: 2px;
+        background-color: #a00909b1;
+        transition: 0.5s;
+        z-index: 999;
+    }
+    
+    #menyAvPaa:checked ~ #burger > div {
+      background-color: #ffffff;
+    }
+    
+    #menyAvPaa:checked ~ #burger > div:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+    }
+    #menyAvPaa:checked ~ #burger > div:nth-child(2) {
+        opacity: 0;
+    }
+    #menyAvPaa:checked ~ #burger > div:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+    /* main */
+    .maindescription{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: -90px;
+      }
+    .maindescription p{
+      padding-top: 20px;
+      padding-bottom: 40px;
+      width: 92%;
+    }
+    .tonguepic{
+      margin: 0 auto;
+    }
+    .tonguepic img{
+      width: 240px;
+      height: 240px;
+    }
+    .maindescription p{
+      padding-bottom: 40px;
+      width: 100%;
+      font-size: 14px;
+    }
+    /* footer */
+    footer{
+        width: 100%;
+        background-image: url(../img/footerbackground.jpg);
+    }
+    .topfooter{
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        justify-content: space-around;
+    }
+    .topfooter img{
+      width: 60px;
+      height: 60px;
+    }
+    .footinformation, .footinformation a, .footcontact{
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .topfooter h3{
+        padding-bottom: 24px;
+    }
+    .footinformation li{
+        padding-bottom: 16px;
+    }
+    .footcontact p{
+        padding-bottom: 36px;
+        font-size: 12px;
+    }
+    .footerline{
+        width: 100%;
+        height: 1px;
+        background-color: #FFFFFF;
+        opacity: 0.1;
+    }
+    .footerbottom p{
+      padding-top: 300px;
+    } 
+  }
+    
+  
